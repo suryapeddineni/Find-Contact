@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ListContacts from "./ListContancts";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const contacts = [
+  {
+    id: "ryan",
+    name: "Ryan Florence",
+    email: "ryan@reacttraining.com",
+    avatarURL: "http://localhost:5001/ryan.jpg"
+  },
+  {
+    id: "michael",
+    name: "Michael Jackson",
+    email: "michael@reacttraining.com",
+    avatarURL: "http://localhost:5001/michael.jpg"
+  },
+  {
+    id: "tyler",
+    name: "Tyler McGinnis",
+    email: "tyler@reacttraining.com",
+    avatarURL: "http://localhost:5001/tyler.jpg"
+  }
+];
+
+class App extends Component {
+  render() {
+    return <ListContacts contacts={contacts} />;
+  }
 }
 
 export default App;
